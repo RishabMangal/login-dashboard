@@ -42,7 +42,7 @@ export default class Auth {
         this.history.push(redirectLocation);
       } else if (err) {
         this.history.push("/");
-        alert(`Error: ${err.error}. Check the console for further details.`);
+        alert(`Error: ${err.error}.`);
         console.log(err);
       }
       localStorage.removeItem(REDIRECT_ON_LOGIN);
