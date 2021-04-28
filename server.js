@@ -19,9 +19,9 @@ const checkJwt = jwt({
 
 const app = express();
 
-app.get("/",(req,res)=>{
+app.get("/", (req, res) => {
   res.json({
-    message:"Hello"
+    message: "Hello",
   });
 });
 
@@ -40,8 +40,8 @@ app.get("/private", checkJwt, function(req, res) {
 app.get("/course", checkJwt, checkScope(["read:courses"]), function(req, res) {
   res.json({
     courses: [
-      { id: 1, title: "Building Apps with React and Redux" },
-      { id: 2, title: "Creating Reusable React Components" },
+      { id: 1, title: "course 1" },
+      { id: 2, title: "course 2" },
     ],
   });
 });
